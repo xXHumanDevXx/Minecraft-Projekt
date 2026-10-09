@@ -1,0 +1,23 @@
+name: FalixProtect
+version: 1.0.0
+main: de.falixprotect.FalixProtect
+api-version: '1.21'
+description: Schutzblock, der einen Bereich vor Abbau und Explosionen schützt
+
+commands:
+  protection:
+    description: Schutzblock erhalten oder Schutzbereiche verwalten
+    usage: /protection [list | reload]
+    aliases: [schutz]
+    permission: falixprotect.use
+
+permissions:
+  falixprotect.use:
+    description: Darf /protection benutzen und den Schutzblock erhalten
+    default: op
+  falixprotect.admin:
+    description: Darf Schutzbereiche auflisten und die Config neu laden
+    default: op
+  falixprotect.bypass:
+    description: Darf fremde Schutzbereiche abbauen und den Schutzblock entfernen
+    default: op
