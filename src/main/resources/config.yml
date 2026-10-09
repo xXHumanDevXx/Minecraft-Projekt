@@ -1,0 +1,72 @@
+# =====================================================================
+#  FalixControl - Konfiguration        (Änderungen übernehmen: /fc reload)
+#  Befehle ohne "/" eintragen. "*" bedeutet alle Befehle.
+#  Gruppen werden über die Permission falixcontrol.group.<name> vergeben
+#  (z. B. mit LuckPerms). Ohne Rechte-Plugin greift die Standardgruppe.
+# =====================================================================
+
+settings:
+  default-group: spieler       # Gruppe für alle, die keiner Gruppe angehören
+  hide-commands: true          # true = Befehle werden in der Tab-Liste ausgeblendet
+
+# ---------------------------------------------------------------------
+#  Gruppen
+#  Die Reihenfolge zählt: Die erste passende Gruppe gewinnt.
+# ---------------------------------------------------------------------
+groups:
+  admin:
+    commands:
+      - "*"
+
+  mod:
+    commands:
+      - help
+      - list
+      - msg
+      - tell
+      - r
+      - ban
+      - unban
+      - kick
+      - mute
+      - unmute
+      - timeout
+      - untimeout
+      - warn
+      - warnings
+      - clearwarns
+      - fg
+
+  spieler:
+    commands:
+      - help
+      - list
+      - msg
+      - tell
+      - r
+
+# ---------------------------------------------------------------------
+#  Einzelne Spieler
+#  Ein Eintrag hier überschreibt die Gruppe komplett.
+#  Schreibweise: Spielername, darunter die erlaubten Befehle.
+# ---------------------------------------------------------------------
+players: {}
+#  Beispiel:
+#  MaxMustermann:
+#    - help
+#    - spawn
+
+# ---------------------------------------------------------------------
+#  Nachrichten
+# ---------------------------------------------------------------------
+messages:
+  prefix: "&8[&bFalixControl&8] &7"
+  usage: "{prefix}&cBenutzung: &f{usage}"
+  reload-done: "{prefix}&aKonfiguration neu geladen. Tab-Listen wurden aktualisiert."
+  player-offline: "{prefix}&cSpieler &f{player} &cist nicht online."
+  command-blocked: "{prefix}&cDieser Befehl ist für dich nicht verfügbar. &8(&f/{command}&8)"
+  check-header: "{prefix}&eBefehle von &f{player}&e:"
+  check-source: "&8 Quelle: &7{source}"
+  check-commands: "&8 Befehle: &7{commands}"
+  test-allowed: "{prefix}&a{player} darf &f/{command}&a benutzen."
+  test-denied: "{prefix}&c{player} darf &f/{command}&c nicht benutzen."
