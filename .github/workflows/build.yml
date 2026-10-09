@@ -1,4 +1,4 @@
-name: Build FalixControl
+name: Build FalixProtect
 
 on:
   push:
@@ -17,5 +17,5 @@ jobs:
       - run: mvn -B package
       - uses: actions/upload-artifact@v4
         with:
-          name: FalixControl
-          path: target/FalixControl.jar
+          name: FalixProtect
+          path: target/FalixProtect.jar
