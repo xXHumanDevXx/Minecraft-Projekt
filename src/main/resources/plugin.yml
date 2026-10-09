@@ -1,0 +1,59 @@
+name: FalixTeleport
+version: 1.0.0
+main: de.falixteleport.FalixTeleport
+api-version: '1.21'
+description: Teleport-Anfragen, Warps, Homes, Party und Menüs
+
+commands:
+  tpa:
+    description: Teleport-Anfrage an einen Spieler senden
+    usage: /tpa <Spieler>
+    permission: falixteleport.use
+  tpaccept:
+    description: Teleport-Anfrage annehmen
+    usage: /tpaccept
+    permission: falixteleport.use
+  tpdeny:
+    description: Teleport-Anfrage ablehnen
+    usage: /tpdeny
+    permission: falixteleport.use
+  tphere:
+    description: Spieler zu dir teleportieren lassen (Anfrage)
+    usage: /tphere <Spieler>
+    permission: falixteleport.admin
+  party:
+    description: Party verwalten
+    usage: /party <invite | accept | leave | kick | disband | list>
+    permission: falixteleport.use
+  warp:
+    description: Warp-Menü öffnen oder zu einem Warp teleportieren
+    usage: /warp [Name]
+    permission: falixteleport.use
+  setwarp:
+    description: Warp an deiner Position setzen
+    usage: /setwarp <Name>
+    permission: falixteleport.admin
+  delwarp:
+    description: Warp löschen
+    usage: /delwarp <Name>
+    permission: falixteleport.admin
+  sethome:
+    description: Home an deiner Position setzen
+    usage: /sethome [Name]
+    permission: falixteleport.use
+  home:
+    description: Home-Menü öffnen oder zu einem Home teleportieren
+    usage: /home [Name]
+    permission: falixteleport.use
+  delhome:
+    description: Home löschen
+    usage: /delhome <Name>
+    permission: falixteleport.use
+
+permissions:
+  falixteleport.use:
+    description: Darf die Spieler-Befehle benutzen
+    default: true
+  falixteleport.admin:
+    description: Darf Warps setzen, /tphere nutzen und hat unbegrenzte Homes
+    default: op
